@@ -622,14 +622,17 @@ body {
     gap: 40px;
     height: auto !important;
   }
+  .serviceContainer {
+    padding: 10px;
+  }
+  .myService {
+    margin-bottom: 20px;
+  }
   .nav {
     gap: 0;
   }
-  .topList {
-    gap: 50px;
-  }
   .content {
-    font-size: 25px;
+    font-size: 30px;
   }
   #orbit {
     display: none;
@@ -697,7 +700,7 @@ body {
     font-size: 15px;
   }
   .topList {
-    gap: 10px;
+    gap: 50px;
     right: 5px;
     position: static;
   }
