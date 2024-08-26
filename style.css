@@ -625,8 +625,14 @@ body {
   .nav {
     gap: 0;
   }
+  .topList {
+    gap: 50px;
+  }
   .content {
     font-size: 25px;
+  }
+  #orbit {
+    display: none;
   }
   .redoy,
   .font {
