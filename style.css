@@ -11,12 +11,11 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   cursor: none;
-  background-color: #0d011a;
 }
 
 .container {
   height: auto;
-  min-width: 100vw;
+  max-width: 100vw;
   background-color: #0d011a;
   display: flex;
   flex-direction: column;
@@ -70,7 +69,7 @@ body {
   scale: 0;
   margin-left: 40px;
   transition: 0.5s ease;
-  transition-delay: 1s;
+  transition-delay: 0.3s;
   z-index: 20;
 }
 
@@ -88,7 +87,7 @@ body {
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(1px);
   z-index: 3;
-  scale: 1;
+  scale: 0;
   transition: 0.5s cubic-bezier(0, 0, 0, 1);
   position: absolute;
   animation: orbit 3s linear infinite;
@@ -98,7 +97,7 @@ body {
   height: 10px;
   width: 10px;
   border-radius: 50%;
-  background: linear-gradient(-25deg, #c300ff 0%, #ffffff 70%);
+  background: linear-gradient(-25deg, #c300ff 0%, #ffffff 80%);
 }
 
 .dot2 {
@@ -118,17 +117,19 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 60px;
+  gap: 50px;
+  padding: 15px;
 }
 
 .content {
+  width: 765px;
   font-family: "Karla", sans-serif;
   font-size: 55px;
   color: rgb(255, 255, 255);
   display: flex;
+  padding: 5px;
   flex-direction: column;
   align-self: flex-start;
-  gap: 5px;
   font-weight: 700;
   z-index: 2;
 }
@@ -171,47 +172,47 @@ body {
 }
 
 .name1 {
-  animation-delay: 2.4s;
+  animation-delay: 1.4s;
 }
 
 .name2 {
-  animation-delay: 2.5s;
+  animation-delay: 1.5s;
 }
 
 .name3 {
-  animation-delay: 2.6s;
+  animation-delay: 1.6s;
 }
 
 .name4 {
-  animation-delay: 2.7s;
+  animation-delay: 1.7s;
 }
 
 .name5 {
-  animation-delay: 2.9s;
+  animation-delay: 1.9s;
 }
 
 .skill1 {
-  animation-delay: 4.3s;
+  animation-delay: 3.3s;
 }
 
 .skill2 {
-  animation-delay: 4.4s;
+  animation-delay: 3.4s;
 }
 
 .skill3 {
-  animation-delay: 4.5s;
+  animation-delay: 3.5s;
 }
 
 .skill4 {
-  animation-delay: 4.6s;
+  animation-delay: 3.6s;
 }
 
 .skill5 {
-  animation-delay: 4.8s;
+  animation-delay: 3.8s;
 }
 
 #name::after {
-  animation-delay: 1.5s;
+  animation-delay: 0.5s;
 }
 
 .skill {
@@ -226,11 +227,11 @@ body {
     right: 100%;
     width: 0;
     height: 100%;
-    background: linear-gradient(-25deg, #c300ff 0%, #ffffff 100%);
+    background: linear-gradient(-25deg, #c300ff 0%, #ffffff 120%);
     animation-name: swipe;
     animation-timing-function: ease-in-out;
     animation-duration: 2s;
-    animation-delay: 3.5s;
+    animation-delay: 2.5s;
   }
 }
 
@@ -252,6 +253,37 @@ body {
   }
 }
 
+.paragraph {
+  font-family: "JetBrains Mono", sans-serif;
+  color: #b6b6b6;
+  font-size: 18px;
+  line-height: 28px;
+  width: 90%;
+  margin-top: 20px;
+  transform: translateY(50px);
+  opacity: 0;
+  animation: uper 0.7s ease 4.6s forwards;
+}
+
+.email {
+  font-family: "Karla", sans-serif;
+  margin-top: 70px;
+  font-size: 25px;
+  color: white;
+  transform: translateY(50px);
+  opacity: 0;
+  animation: uper 0.7s ease 4.7s forwards;
+}
+.adress {
+  margin-top: 10px;
+  color: #b6b6b6;
+  font-size: 18px;
+  transform: translateY(50px);
+  opacity: 0;
+  font-family: "JetBrains Mono", sans-serif;
+  animation: uper 0.7s ease 4.8s forwards;
+}
+
 .box {
   display: flex;
   gap: 20px;
@@ -270,6 +302,16 @@ body {
   background: url(martin-martz-UnfxhYIgHmc-unsplash.jpg);
   background-size: cover;
   background-position: center;
+  transform: translateY(150px);
+  opacity: 0;
+  animation: uper 1s ease forwards;
+}
+
+@keyframes uper {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .btmBox h1 {
@@ -284,7 +326,7 @@ body {
 .html {
   height: 450px;
   width: 120px;
-  transition: 0.5s ease;
+  animation-delay: 4.6s;
   h1 {
     margin-top: 180px;
   }
@@ -293,6 +335,7 @@ body {
 .css {
   height: 400px;
   width: 120px;
+  animation-delay: 4.8s;
   h1 {
     margin-top: 180px;
   }
@@ -301,6 +344,7 @@ body {
 .js {
   height: 350px;
   width: 120px;
+  animation-delay: 5s;
   h1 {
     margin-top: 150px;
   }
@@ -310,11 +354,20 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  min-width: 100vw;
+  max-width: 100vw;
   background-color: #0d011a;
   display: flex;
   flex-direction: column;
-  padding: 30px;
+  gap: 50px;
+}
+
+.myService {
+  font-family: "Lato", monospace;
+  word-spacing: 5px;
+  font-size: 40px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  position: relative;
 }
 
 .service {
@@ -322,6 +375,8 @@ body {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 30px;
+  padding-inline: 8px;
   gap: 50px;
   justify-content: center;
   align-items: center;
@@ -335,45 +390,13 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  box-shadow: 2px 0px 5px 0.5px rgb(187 0 255);
   border-radius: 20px;
   transform-style: preserve-3d;
+  box-shadow: 2px 0px 5px 0.5px rgb(187 0 255);
   transition: 0.5s cubic-bezier(0, 0, 0, 1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .container2nd {
-    animation: fade-out linear forwards;
-    animation-timeline: view();
-    animation-range: exit -200px;
-  }
-
-  .serviceBox h1,
-  .myService {
-    scale: 0.8;
-    opacity: 0;
-    animation: fade-in linear forwards;
-    animation-timeline: view();
-    animation-range: entry 10px;
-  }
-  .myService {
-    animation-range: 50px 150px;
-  }
-  @keyframes fade-in {
-    to {
-      scale: 1;
-      opacity: 1;
-    }
-  }
-  @keyframes fade-out {
-    to {
-      opacity: 0;
-      scale: 1.3;
-    }
-  }
-}
-
-.serviceBox h1 {
+.serviceBox div {
   font-family: "Karla", sans-serif;
   height: 95%;
   width: 95%;
@@ -386,19 +409,9 @@ body {
   justify-content: center;
   transform-style: preserve-3d;
   font-size: 35px;
+  z-index: 2000;
   font-weight: 700;
   color: #ffffff;
-}
-
-.myService {
-  font-family: "Lato", monospace;
-  word-spacing: 5px;
-  font-size: 40px;
-  font-weight: 900;
-  background: linear-gradient(-25deg, #ffffff 0%, #858585 100%);
-  color: transparent;
-  background-clip: text;
-  margin-bottom: 50px;
 }
 
 #animation {
@@ -406,6 +419,39 @@ body {
 }
 #responsive {
   padding: 15px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .content,
+  .box {
+    animation: fade-out linear forwards;
+    animation-timeline: view();
+    animation-range: exit;
+  }
+
+  .serviceBox div,
+  .myService {
+    scale: 0.8;
+    opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: entry 10px;
+  }
+  .myService {
+    animation-range: 50px 200px;
+  }
+  @keyframes fade-in {
+    to {
+      scale: 1;
+      opacity: 1;
+    }
+  }
+  @keyframes fade-out {
+    to {
+      opacity: 0;
+      scale: 1.25;
+    }
+  }
 }
 
 @media only screen and (max-width: 1224px) {
@@ -416,7 +462,7 @@ body {
   }
   .redoy,
   .font {
-    font-size: 65px;
+    font-size: 70px;
   }
   .logo {
     font-size: 65px;
@@ -440,11 +486,21 @@ body {
 @media only screen and (max-width: 800px) {
   /* Styles */
   .content {
+    width: 635px;
     font-size: 45px;
-    margin-bottom: 50px;
   }
   .container2nd {
-    gap: 0;
+    gap: 50px;
+  }
+  .paragraph {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .adress {
+    font-size: 15px;
+  }
+  .btmBox {
+    animation: uper 1s ease 1s forwards;
   }
   .box {
     animation-range: exit;
@@ -476,7 +532,8 @@ body {
 @media only screen and (max-width: 700px) {
   /* Styles */
   .content {
-    font-size: 33px;
+    width: 555px;
+    font-size: 40px;
     margin-bottom: 40px;
     gap: 5px;
   }
@@ -485,6 +542,19 @@ body {
   }
   .container {
     gap: 70px;
+  }
+  .paragraph {
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 10px;
+  }
+  .adress {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+  .email {
+    margin-top: 50px;
+    font-size: 17px;
   }
   .redoy,
   .font {
@@ -530,11 +600,18 @@ body {
       margin-top: 90px;
     }
   }
-  .myService {
-    font-size: 30px;
+  .serviceContainer {
+    gap: 35px;
   }
-  .service h1 {
-    font-size: 30px;
+  .myService {
+    font-size: 27px;
+  }
+  .serviceBox {
+    height: 150px;
+    width: 300px;
+  }
+  .service div {
+    font-size: 27px;
   }
 }
 @media only screen and (max-width: 510px) {
@@ -623,13 +700,21 @@ body {
   .serviceContainer {
     padding: 10px;
   }
-  .myService {
-    margin-bottom: 20px;
-  }
   .nav {
     gap: 0;
   }
+  .paragraph {
+    font-size: 10px;
+    line-height: 15px;
+  }
+  .adress {
+    font-size: 10px;
+  }
+  .email {
+    font-size: 15px;
+  }
   .content {
+    width: 382px;
     font-size: 30px;
   }
   #orbit {
@@ -656,9 +741,9 @@ body {
     width: 250px;
   }
   .service {
-    margin-bottom: 150px;
+    margin-bottom: 40px;
   }
-  .serviceBox h1 {
+  .serviceBox div {
     font-size: 25px;
     animation-range: 100px 220px;
   }
@@ -719,11 +804,12 @@ body {
     margin: 0;
   }
   .content {
-    font-size: 23px;
+    width: 323px;
+    font-size: 25px;
   }
   .redoy,
   .font {
-    font-size: 23px;
+    font-size: 25px;
   }
   .myService {
     font-size: 22px;
@@ -733,7 +819,7 @@ body {
   }
   .btmBox h1 {
     font-size: 60px;
-    -webkit-text-stroke: 1.5px white;
+    -webkit-text-stroke: 2px white;
   }
 }
 
@@ -742,15 +828,15 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0d011a;
+  background: #16022c;
 }
 
 ::-webkit-scrollbar-thumb {
   margin-right: 10px;
   border-radius: 100vw;
-  background: linear-gradient(-25deg, #c300ff 0%, #0d011a 50%);
+  background-color: rgb(66, 3, 95);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(-25deg, #b700ff 0%, #0d011a 50%);
+  background-color: rgb(174, 0, 255);
 }
