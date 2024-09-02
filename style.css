@@ -715,14 +715,14 @@ body {
   }
   .content {
     width: 382px;
-    font-size: 35px;
+    font-size: 30px;
   }
   #orbit {
     display: none;
   }
   .redoy,
   .font {
-    font-size: 35px;
+    font-size: 30px;
   }
   .logo {
     font-size: 35px;
@@ -805,11 +805,11 @@ body {
   }
   .content {
     width: 323px;
-    font-size: 25px;
+    font-size: 30px;
   }
   .redoy,
   .font {
-    font-size: 25px;
+    font-size: 30px;
   }
   .myService {
     font-size: 22px;
