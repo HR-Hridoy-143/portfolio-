@@ -3,26 +3,29 @@ let dot = document.querySelector("#orbit");
 let list = document.querySelectorAll(".list");
 let card = Array.from(document.querySelectorAll(".serviceBox"));
 let service = document.querySelector(".list1");
+let body = document.querySelector("body");
+let serviceSection = document.querySelector("#Service")
 
 
-window.addEventListener("load",function(){
-    logo.style.transform = "rotate(0)";
-    logo.style.scale = 1;
-        
-});
-
-document.addEventListener("mouseenter",function(){
-    dot.style.scale = 1;
-});
-
-document.addEventListener("mouseleave",function(){
-    dot.style.scale = 0;
-});
 
 document.addEventListener("mousemove",function(dets){
     dot.style.left = `${dets.pageX-20}px`;
     dot.style.top = `${dets.pageY-20}px`;
 
+});
+
+body.addEventListener("mouseenter",function(){
+    dot.style.scale = 1;
+});
+
+body.addEventListener("mouseleave",function(){
+    dot.style.scale = 0;
+});
+
+window.addEventListener("load",function(){
+    logo.style.transform = "rotate(0)";
+    logo.style.scale = 1;
+        
 });
 
 list.forEach(function(element){
@@ -40,7 +43,7 @@ list.forEach(function(element){
 });
 
 card.forEach(function(element){
-    document.addEventListener("mousemove",function(e){
+    serviceSection.addEventListener("mousemove",function(e){
         const x = e.clientX;
         const y = e.clientY;
         
