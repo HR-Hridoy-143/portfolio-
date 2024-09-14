@@ -6,7 +6,19 @@ let service = document.querySelector(".list1");
 let body = document.querySelector("body");
 let serviceSection = document.querySelector("#Service")
 
-
+list.forEach(function(element){
+    
+    element.addEventListener("mouseenter",function(){
+        dot.style.height = "80px";
+        dot.style.width =  "80px";
+        
+    })
+    element.addEventListener("mouseleave",function(){
+        dot.style.height = "40px";
+        dot.style.width =  "40px";
+    })
+    
+});
 
 document.addEventListener("mousemove",function(dets){
     dot.style.left = `${dets.pageX-20}px`;
@@ -26,20 +38,6 @@ window.addEventListener("load",function(){
     logo.style.transform = "rotate(0)";
     logo.style.scale = 1;
         
-});
-
-list.forEach(function(element){
-    
-    element.addEventListener("mouseenter",function(){
-        dot.style.height = "80px";
-        dot.style.width =  "80px";
-        
-    })
-    element.addEventListener("mouseleave",function(){
-        dot.style.height = "40px";
-        dot.style.width =  "40px";
-    })
-    
 });
 
 card.forEach(function(element){
